@@ -5,7 +5,10 @@ import pyttsx3
 from model import Network
 from torchvision import datasets
 import torchvision.transforms as transforms
-batch_size = 64
+
+batch_size = 16
+criterion = torch.nn.NLLLoss()
+
 transforms = transforms.Compose([transforms.ToTensor(),
                                 transforms.Normalize([0.5], [0.5])])
 
